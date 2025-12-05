@@ -25,6 +25,7 @@ void inFile(){
 	}
 }
 
+//KIEM TRA TINH DOI XUNG CUA MA TRAN
 int DoiXung (int A[][101], int n){
 	for(int i=1; i<=n; i++)
 		for(int j=1; j<=n; j++)
@@ -32,12 +33,16 @@ int DoiXung (int A[][101], int n){
 				return 0; //function tra ve 0 neu ma tran khong dx
 	return 1; //tra ve 1 neu ma tran dx qua duong cheo chinh
 }
+
+//KIEM TRA DUONG CHEO BANG 0
 int DuongCheo(int A[][101], int n){
 	for(int i=1; i<=n; i++)
 		if(A[i][i]!=0)
 			return 0; //function tra ve 0 neu tren duong cheo co ptu khac 0
 	return 1; //tra ve 1 neu duong cheo chi co ptu = 0
 }
+
+//KIEM TRA GIA TRI CUA MA TRAN <=1
 int GiaTri(int A[][101], int n){
 	for(int i=1; i<=n; i++)
 		for(int j=1; j<=n; j++)
@@ -45,6 +50,8 @@ int GiaTri(int A[][101], int n){
 				return 0; //function tra ve 0 neu co bat ky ptu nao >1
 	return 1; //tra ve 1 neu toan bo ptu deu nho hon bang 1
 }
+
+//HAM MAIN
 int main() {
 	readFile();
 	inFile();
